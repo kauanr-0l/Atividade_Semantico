@@ -114,7 +114,7 @@ main h1.txt{
 img{
     width: 400px;
 
-    border-radius: 20px;
+    border-radius: 0px;
 }
 
 
@@ -135,7 +135,7 @@ img{
 
 .botoes{
     display: flex;
-    gap: 20px;
+    gap: 80px;
 
     margin-top: 20px;
 }
@@ -144,8 +144,8 @@ img{
     width: 120px;
     height: 50px;
 
-    border: none;
-    border-radius: 10px;
+    /* border: none;
+    border-radius: 10px; */
 
     background-color: #007BFF;
     color: white;
@@ -153,6 +153,8 @@ img{
     cursor: pointer;
 
     transition: 0.3s;
+
+    
 }
 
 .botoes button:hover{
