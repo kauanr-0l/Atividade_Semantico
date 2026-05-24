@@ -53,3 +53,85 @@ async function buscarPorId(id) {
 
 }
 
+async function pesquisarPersonagem() {
+
+    const nomeDigitado = campoPesquisa.value.trim();
+
+    if (nomeDigitado === "") {
+
+        alert("Digite o nome de um personagem.");
+
+        campoPesquisa.focus();
+
+        return;
+    }
+
+    try {
+
+        const resposta = await fetch(
+            `https://rickandmortyapi.com/api/character/?name=${nomeDigitado}`
+        );
+
+        if (!resposta.ok) {
+            throw new Error();
+        }
+
+        const dados = await resposta.json();
+
+        const personagem = dados.results[0];
+
+        mostrarPersonagem(personagem);
+
+        idAtual = personagem.id;
+
+    } catch {
+
+        alert("Personagem não encontrado.");
+
+    }
+
+}
+
+btnPesquisar.addEventListener("click", pesquisarPersonagem);
+
+campoPesquisa.addEventListener("keydown", (evento) => {
+
+    if (evento.key === "Enter") {
+        pesquisarPersonagem();
+    }
+
+});
+
+btnAvancar.addEventListener("click", () => {
+
+    if (idAtual >= totalPersonagens) {
+
+        idAtual = 1;
+
+    } else {
+
+        idAtual++;
+
+    }
+
+    buscarPorId(idAtual);
+
+});
+
+btnVoltar.addEventListener("click", () => {
+
+    if (idAtual <= 1) {
+
+        idAtual = totalPersonagens;
+
+    } else {
+
+        idAtual--;
+
+    }
+
+    buscarPorId(idAtual);
+
+});
+
+buscarPorId(1);
