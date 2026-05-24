@@ -1,162 +1,181 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
 }
 
 body{
-    width: 100dvw;
-    height: 100vh;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
 
     background-color: #f5f5f5;
+
+    overflow-x: hidden;
 }
+
+/* HEADER */
 
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 50px;
+    padding: 40px 50px;
 
     background-color: #eeeeee;
 }
 
-
-
-header div{
+header > section{
     display: flex;
     gap: 10px;
 }
 
-
-
-
-header input{
-    padding: 10px;
-
+header > section > input{
     width: 300px;
     height: 50px;
 
-    border-radius: 5px;
+    padding: 10px;
+
     border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-
-
-header button{
+header > section > button{
     padding: 10px 20px;
-
-    background-color: #007BFF;
-    color: white;
 
     border: none;
     border-radius: 5px;
 
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-header button:hover{
-    transform: scale(1.05);
-}
-
-
-
-
-
-
-
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 80vh;
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
-}
-
-main h1{
-
-    font-size: 24px;
-    color: #333;
-    gap: 40px;
-   
-}
-
-main h1.txt{
-    font-size: 54px;
-   
-}
-
-
-.card{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    flex-grow: 5;
-
-    
-}
-
-
-
-
-
-img{
-    width: 400px;
-
-    border-radius: 0px;
-}
-
-
-
-
-
-#container{
-    display: flex;
-    flex-direction: column;
-
-    gap: 15px;
-
-    padding: 20px 0px;
-}
-
-
-
-
-.botoes{
-    display: flex;
-    gap: 80px;
-
-    margin-top: 20px;
-}
-
-.botoes button{
-    width: 120px;
-    height: 50px;
-
-    /* border: none;
-    border-radius: 10px; */
-
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
 
     cursor: pointer;
 
-    transition: 0.3s;
-
-    
+    transition: .3s;
 }
 
-.botoes button:hover{
+header > section > button:hover{
     transform: scale(1.05);
+}
+
+/* MAIN */
+
+main{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+
+    padding: 30px;
+}
+
+main > section > h1{
+    text-align: center;
+}
+
+/* CARD */
+
+main > article{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 0px 15px rgba(0,0,0,.15);
+}
+
+main > article > figure > img{
+    width: 400px;
+
+    border-radius: 10px;
+}
+
+main > article > section{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    gap: 20px;
+
+    min-width: 300px;
+}
+
+main > article > section > p{
+    font-size: 1.3rem;
+}
+
+/* BOTÕES */
+
+main > article > section > nav{
+    display: flex;
+    gap: 50px;
+
+    margin-top: 20px;
+}
+
+main > article > section > nav > button{
+    width: 120px;
+    height: 50px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #007bff;
+    color: white;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+main > article > section > nav > button:hover{
+    transform: scale(1.05);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px){
+
+    header{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header > section{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header > section > input{
+        width: 100%;
+    }
+
+    main > article{
+        flex-direction: column;
+    }
+
+    main > article > figure > img{
+        width: 100%;
+        max-width: 350px;
+    }
+
+    main > article > section > nav{
+        gap: 20px;
+    }
+
 }

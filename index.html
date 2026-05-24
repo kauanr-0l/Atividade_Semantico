@@ -1,85 +1,89 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty API</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="stylesheet" href="style.css" />
-
-  <title>Atividade</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
+    <header>
 
-    <h1>API Rick and Morty1</h1>
+        <h1>Rick and Morty API</h1>
 
-    <div>
+        <section>
 
-      <input type="text" id="pesquisa" placeholder="Digite um personagem" />
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Digite um personagem">
 
-      <button id="buscar">
-        pesquisar
-      </button>
+            <button id="buscar">
+                Pesquisar
+            </button>
 
-    </div>
+        </section>
 
-  </header>
+    </header>
 
+    <main>
 
-  <main>
+        <section>
 
-   <h1 class="txt">
-      TEXTO
-    </h1>
+            <h1 id="titulo-personagem">
+                Rick Sanchez
+            </h1>
 
-    <section class="card">
+        </section>
 
-   
+        <article>
 
-      <img id="imagem" src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" alt="IMG" />
+            <figure>
 
-      <div id="container">
+                <img
+                    id="imagem"
+                    src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+                    alt="Imagem do personagem">
 
-        <h1 id="nome">
-         ???????????????????????????
-        </h1>
+            </figure>
 
-        <h1 id="especie">
-         ???????????????????????????
-        </h1>
+            <section>
 
-        <h1 id="status">
-         ???????????????????????????
-        </h1>
+                <p id="especie">
+                    Espécie
+                </p>
 
-        <h1 id="genero">
-         ???????????????????????????
-        </h1>
+                <p id="status">
+                    Status
+                </p>
 
-       
-        <div class="botoes">
+                <p id="genero">
+                    Gênero
+                </p>
 
-          <button id="voltar">
-            voltar
-          </button>
+                <nav>
 
-          <button id="avancar">
-            avançar
-          </button>
+                    <button id="voltar">
+                        Voltar
+                    </button>
 
-        </div>
+                    <button id="avancar">
+                        Avançar
+                    </button>
 
-      </div>
+                </nav>
 
-    </section>
+            </section>
 
-  </main>
+        </article>
 
-  <script src="script.js"></script>
+    </main>
+
+    <script src="script.js"></script>
 
 </body>
 
