@@ -10,12 +10,12 @@ body{
     display: flex;
     flex-direction: column;
 
-    background-color: #f5f5f5;
+    background-color: #917C5DFF;
 
     overflow-x: hidden;
 }
 
-/* HEADER */
+
 
 header{
     display: flex;
@@ -24,7 +24,7 @@ header{
 
     padding: 40px 50px;
 
-    background-color: #eeeeee;
+    background-color: #FAE48BFF;
 }
 
 header > section{
@@ -60,7 +60,7 @@ header > section > button:hover{
     transform: scale(1.05);
 }
 
-/* MAIN */
+
 
 main{
     flex: 1;
@@ -86,7 +86,7 @@ main > article{
     align-items: center;
     gap: 40px;
 
-    background-color: white;
+    background-color: #A6EEE699;
 
     padding: 30px;
 
@@ -147,7 +147,7 @@ main > article > section > nav > button:hover{
     transform: scale(1.05);
 }
 
-/* RESPONSIVIDADE */
+
 
 @media (max-width: 768px){
 
